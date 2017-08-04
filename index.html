@@ -1,0 +1,917 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hot Deluxe Resturant</title>
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet"> 
+<style>
+
+	body
+	{
+	 margin: 0px;
+	}
+	.container
+	{
+		width: 90%;
+		margin: 0px auto;
+	}
+	
+	.header
+	{
+		width: 90%;
+		height:50px;
+		margin: 0px auto;
+		background-color:#2A2D32;
+	}
+
+	.logo
+	{
+		width: 20%;
+		height: 25px;
+		margin:12.5px 2px;
+		float: left;
+	}
+	.logo_text
+	{
+		width: 14%;
+		height: 25px;
+		margin:12.5px 8px;
+		float: left;
+		color: white;
+		line-height: 25px;
+		font-size: 16px;
+		font-style: italic;
+	}
+	
+	.menu
+	{
+		width: 60%;
+		height: 50px;
+		margin:0px;
+		float: right;
+	}
+	.menu ul
+	{
+		list-style: none;
+		margin:0px;
+		padding:0px;
+	}
+	.menu ul li
+	{
+		display: inline;
+	}
+	.menu ul li a
+	{
+		color: white;
+		font-size: 14px;
+		font-weight: 500;
+		float: left;
+		width: 106px;
+		margin:0px 1px;
+		padding: 0px;
+		height: 45px;
+		text-decoration: none;
+		line-height: 50px;
+		text-align: center;
+
+	}
+	.menu ul li a:hover, .active
+	{
+		border-top: 5px solid yellow;
+		background-color: #111;
+	}
+	
+	.slider
+	{
+		width: 90%;
+		height: 400px;
+		margin:0px auto;
+		background-image:url(http://s2.postimg.org/htn290wax/1600x900_Wonderful_Double_Queen.jpg);
+		background-size:cover;
+		background-repeat: no-repeat;
+		overflow: hidden;
+	}
+     	.slider_opacity
+     	{
+     		width: 100%;
+     		height: 400px;
+     		margin:0px;
+     		float: left;
+     		background-color:rgba(0,0,0,.5);
+     	}
+	.hello_text
+	{
+		width: 15%;
+		height: 30px;
+		margin:50px auto;
+		color: white;
+		font-size: 16px;
+		text-align: center;
+		border-bottom:1px dashed #fff;
+	}
+	.title_text
+	{
+		width: 20%;
+		height: 30px;
+		margin:50px auto;
+		color:#fff;
+		font-size: 24px;
+		font-weight: bold;
+		text-align: center;
+		border-bottom:1px dashed #fff;
+	}
+	.service_text
+	{
+		width: 40%;
+		height: 30px;
+		margin:50px auto;
+		color:#FFF;
+		font-size: 24px;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.wrapper
+	{
+		width: 90%;
+		height: 85px;
+		margin:-35px auto;
+		background-image: url(http://s3.postimg.org/uvhpss7g3/background2.jpg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		position: relative;
+	}
+	.inquery_box
+	{
+		width: 75%;
+		height: 100px;
+		margin:0px;
+		background:#2A2D32;
+		position: absolute;
+		top: -50px;
+    	right: 160px;
+    	box-shadow: 0px 5px 31px #000;
+    	overflow: hidden;
+	}
+	.searchTerm
+	{
+	    width: 200px;
+	    height: 30px;
+	    text-indent: 24px;
+	    margin: 0px auto;
+	    background:white;
+	    border: 0px;
+	    border-radius: 5px;
+	    margin-left: 8px;
+	    outline: none;
+	    font-size: 14px;
+	    font-family: sans-serif;
+	}
+	.selectTerm
+	{
+	    width: 200px;
+	    height: 30px;
+	    margin: 0px auto;
+	    background:white;
+	    border: 0px;
+	    border-radius: 5px;
+	    margin-left: 8px;
+	    outline: none;
+	    font-size: 14px;
+	    font-family: sans-serif;
+	}
+	.form-group1
+	{
+		width: 25%;
+		height: 60px;
+		margin: 20px 5px 0 19px;
+		float: left;
+		position: relative;
+	}
+	.form-group2
+	{
+		width: 25%;
+		height: 60px;
+		margin:20px 5px;
+		float: left;
+		position: relative;
+	}
+	.form-group1 p
+	{
+		margin:0;
+	    color: yellow;
+	    text-indent: 10px;
+	}
+	.form-group2 p
+	{
+		margin:0;
+	    color:yellow;
+	    text-indent: 10px;
+    }
+	.btn
+	{
+	    width: 17px;
+	    height: 19px;
+	    position: absolute;
+	    left: 15px;
+	    background:url(http://s3.postimg.org/yz91af7oz/calender.png) no-repeat;
+	    margin-top: -24px;
+	    border: 0px;
+	    outline: none;
+	}
+	.select_style
+	{
+		width: 26%;
+		height: 60px;
+		margin:20px 5px;
+		float: left;
+	}
+	.select_style p
+	{
+		margin:0;
+		color:yellow;
+    	text-indent: 10px;
+	}
+	.view_btn
+	{
+		width: 15%;
+		height: 30px;
+		margin:40px 0;
+		float: left;
+		background-color:#FFD701;
+		border-radius: 5px;
+		text-align: center;
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 30px;
+	}
+	.view_btn a
+	{
+		text-decoration: none;
+		color: #000;
+		font-family: sans-serif;
+		font-size:16px;
+	}
+
+
+	/*carousel_slide*/
+
+
+	.carousel_slide
+	{
+		width: 90%;
+		height: 427px;
+		margin: 0px auto;
+		background-image:url(http://s3.postimg.org/8aqh3u3zn/background.jpg);
+		background-repeat:no-repeat;
+		background-attachment: fixed;
+		background-size:cover;
+		overflow: hidden;
+	}
+	.package
+	{
+		width: 75%;
+		height: 100px;
+		margin:23px auto;
+
+	}
+     .package h2
+     {
+     	text-align: center;
+     	font-size: 30px;
+     	margin: 10px;
+     	font-family: 'Dancing Script', cursive;
+     }
+     .package p
+     {
+     	text-align: center;
+     	color: #000;
+     	font-size: 16px;
+     	margin: 0px;
+     }
+     .slider_wrapper
+	{
+		width: 100%;
+		height: 300px;
+		margin: 14px 0;
+		overflow: hidden;
+		border-bottom: 2px solid gray;
+	}
+    .carousel_slider_wrapper
+	{
+		width: 80%;
+		height: 300px;
+		margin: 0px;
+		float: left;
+	}
+	.left_btn
+	{
+		width: 60px;
+		height: 85px;
+		margin: 110px 0 0 5%;
+		float: left;
+	}
+	.right_btn
+	{
+		width: 60px;
+		height: 85px;
+		margin: 110px 0px 0px 0px;
+		float: left;
+	}
+	.circle
+	{
+	    width: 200px;
+	    height: 200px;
+	    background:url(http://s3.postimg.org/izvfnzhyr/Golf_LP.jpg) no-repeat;
+	    float: left;
+	    border-radius: 50%;
+	    margin: 59px 0 0 65px;
+	}
+ .properties
+ {
+ 	width: 90%;
+ 	height: 800px;
+ 	margin: 0px auto;
+ 	background-image: url(http://s3.postimg.org/j92norqgj/backgroun_img.jpg);
+ 	background-repeat: no-repeat;
+ 	background-size: cover;
+ 	overflow: hidden;
+
+ }
+ .properties_box{
+ 	width: 100%;
+ 	height: 300px;
+ 	margin: 10px auto;
+ 	float: left;
+}
+ .property_style {
+ 	width: 30%;
+ 	height: 300px;
+ 	margin: 0px 5px 0 28px;
+ 	float: left;
+}
+
+.pro_img {
+	width: 100%;
+ 	height: 180px;
+ 	margin: 0px;
+ 	background-image: url(http://s2.postimg.org/5jch7x3t5/accom003.jpg);
+ 	background-repeat: no-repeat;
+ 	background-size: contain;
+ 	float: left;
+}
+
+.pro_name {
+	width: 100%;
+ 	height: 80px;
+ 	margin: 0px;
+ 	float: left;
+}
+.pro_name h3
+{
+	margin: 5px;
+	text-align: center;
+	font-size: 20px;
+	font-family:serif;
+	font-weight: normal;
+}
+.pro_name p
+{
+	margin: 0px;
+	text-align: center;
+}
+.pro_icon {
+	width: 100%;
+ 	height: 40px;
+ 	margin: 0px;
+ 	float: left;
+}
+.icon
+{
+    width: 48%;
+    height: 25px;
+    margin: 8px auto;
+}
+.properties_title 
+{
+	width: 70%;
+	height: 70px;
+	margin: 0px auto;
+}
+.properties_title h2
+{
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Dancing Script', cursive;
+
+}
+.info_box {
+	width: 90%;
+	height:200px;
+	margin: 0px auto;
+	background-color:#FFD701;
+	overflow: hidden;
+}
+
+.info_text {
+	width: 70%;
+	height: 100px;
+	margin: 50px 20px;
+	float: left;
+	background-color:;
+}
+.info_text h2{
+	font-size: 34px;
+	margin: 0;
+	color: #fff;
+	font-family: sans-serif;
+	font-weight: normal;
+}
+.info_text p{
+	font-size:18px;
+	margin:15px;
+	color: #fff;
+	font-style: italic;
+	font-family: sans-serif;
+	font-weight: normal;
+}
+
+.contain {
+	width: 90%;
+	margin:0px auto;
+	position: relative;
+
+}
+.person {
+	width: 25%;
+	height: 200px;
+	margin:0px;
+	float:right;
+
+}
+.person_img{
+	width: 22.5%;
+	height: 200px;
+	margin: 0px;
+	position: absolute;
+	top: -84px;
+	right: 61px;
+}
+.footer_container
+{
+	width: 100%;
+	background-color: #333333;
+	margin: 0;
+	overflow: hidden;
+	border-bottom: 40px solid #1F1F1F;
+}
+.footer
+{
+	width: 90%;
+	height: 300px;
+	margin: 0px auto;
+}
+
+.footer_Style1
+{
+	width: 20%;
+	height: 250px;
+	margin: 25px 5px 0px 10px;
+	float: left;
+	outline: none;
+}
+.footer_Style2
+{
+	width: 34%;
+	height: 250px;
+	margin: 25px 5px 0px 5px;
+	float: left;
+	outline: none;
+}
+.footer_Style1 h3
+{
+	font-size: 18px;
+	color: #fff;
+}
+.footer_Style1 p
+{
+	font-size: 15px;
+	color: #fff;
+	text-align:left;
+}
+.footer_Style2 h3
+{
+	font-size: 18px;
+	color: #fff;
+}
+ .about_Text
+ {
+ 	width: 100%;
+ 	height: 192px;
+ }
+ 
+ .news_Text
+ {
+ 	
+ 	width: 100%;
+ 	height: 192px;
+ }
+ .deluxe-hotels
+ {
+ 	width: 100%;
+ 	height: 192px;
+ }
+ .member_area
+ {
+ 	width: 100%;
+ 	height: 192px;
+ }
+.footer_Style2 p
+{
+	font-size: 15px;
+	color: #fff;
+	text-align:left;
+}
+.user
+{
+  width: 180px;
+  height:30px;
+  border-radius:8px;
+  border: 1px solid #000;
+  margin: 0 0 0 15px;
+  background-color: #333333;
+}
+label
+{
+	font-size: 16px;
+	color: white;
+	margin:20px;
+}
+.form-groups
+{
+	width: 100%;
+	height: 180px;
+	margin-bottom: 10px;
+}
+.login-btn
+{
+	width: 100px;
+	height: 30px;
+	margin-left: 14px;
+	margin-top: 10px;
+	background: yellow;
+	border: 0px;
+	border-radius:8px;
+	color: #080606;
+	font-size: 16px;
+	font-weight: 550;
+}
+.login-btn a
+{
+	text-decoration: none;
+	text-align: center;
+	color:#000;
+}
+.read-more
+{
+	width: 100px;
+	height: 30px;
+	margin-left: 14px;
+	margin-top: 10px;
+	background: yellow;
+	border: 0px;
+	border-radius:8px;
+	color: #080606;
+	font-size: 16px;
+	font-weight: 550;
+}
+.read-more a
+{
+	text-decoration: none;
+	text-align: center;
+	color:#000;
+}
+</style>
+</head>
+
+<body>
+		<div class="container">
+			<div class="header">
+				<div class="logo">
+					<img src="http://s3.postimg.org/xsvcd8b77/logo.png" alt="missing logo">
+				</div><!-- logo -->
+				<div class="logo_text">Hotel & Motel Theme</div><!-- logo_text -->
+				<div class="menu">
+					<ul>
+						<li><a href="#" class="active">START</a></li>
+						<li><a href="#">FACILITIES</a></li>
+						<li><a href="#">RESTURANT</a></li>
+						<li><a href="#">CONFERENCE</a></li>
+						<li><a href="#">BOOKING</a></li>
+						<li><a href="#">CONTACT</a></li>
+					</ul>
+				</div>
+			</div><!-- header -->
+		</div><!-- container -->
+
+		<div class="container">
+			<div class="slider">
+				<div class="slider_opacity">
+					<div class="hello_text">
+					Hello, You've Reached
+				</div><!-- hello_text -->
+				<div class="title_text">
+					HOTEL DELUXE
+				</div><!-- title_text -->
+				<div class="service_text">
+					HOTEL - SPA SALOON - FINE DINING
+				</div><!-- service_text -->
+				</div>
+			</div><!-- slider -->
+		</div><!-- container -->
+
+		<div class="container">
+			<div class="wrapper">
+				<div class="inquery_box">
+					<div class="form-group1">
+						<p>Arrival</p>
+						<input type="text" class="searchTerm" placeholder="28/01/2013">
+						<button type="submit" class="btn"></button>
+					</div><!-- form-group 1-->
+					<div class="form-group2">
+						<p>Deprature</p>
+						<input type="text" class="searchTerm" placeholder="28/01/2013">
+						<button type="submit" class="btn"></button>
+					</div><!-- form-group2 -->
+					<div class="select_style">
+					<p>Room Type</p>
+						<select class="selectTerm">
+							<option>Standard single room</option>
+							<option>Luxury Room</option>
+							<option></option>
+						</select>
+					</div><!-- select_style -->
+					<div class="view_btn">
+						<a href="#">View Price</a>
+					</div>
+				</div><!-- inquery_box -->   
+			</div><!-- wrapper -->
+		</div><!-- container -->
+
+
+		<div class="container">
+			<div class="carousel_slide">
+				<div class="package">
+					<h2>Book a Package</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.
+					</p>
+				</div><!-- package -->
+ 				<div class="slider_wrapper">
+ 					<div class="left_btn">
+ 						<img src="http://s2.postimg.org/l7i9sg8sp/left_arrow.png">
+ 					</div><!-- left_btn -->
+ 					<div class="carousel_slider_wrapper">
+ 						<div class="circle"></div>
+ 						<div class="circle"></div>
+ 						<div class="circle"></div>
+ 					</div><!-- carousel_slider_wrapper -->
+ 					<div class="right_btn">
+ 						<img src="http://s3.postimg.org/p0oj7bf77/right_arrow.png" alt="missing">
+ 					</div><!-- right_btn -->
+ 				</div><!-- slider_wrapper -->
+			</div><!-- carousel_slide -->
+		</div><!-- container -->
+
+		<div class="container">
+			<div class="properties">
+			<div class="properties_title">
+			<h2>Our Room Types</h2>
+			</div>
+				<div class="properties_box"><!-- properties_box -->
+					<div class="property_style">
+					<div class="pro_img">
+						<img src="">
+					</div><!-- pro_img -->
+					<div class="pro_name">
+						<h3>Standard Double room</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun.
+						</p>
+					</div><!-- pro_name -->
+					<div class="pro_icon">
+						<div class="icon">
+						<span><img src="http://s3.postimg.org/fgnqms0c3/air.png"></span>
+						<span><img src="http://s3.postimg.org/c25k6n4xf/coler.png"></span>
+						<span><img src="http://s3.postimg.org/nfs3hufg3/iron_icon.png"></span>
+						<span><img src="http://s3.postimg.org/uk9wqvmpf/image.png"></span>
+						<span><img src="http://s3.postimg.org/i6x2jyx0z/wifi.png"></span>
+						<span><img src="http://s3.postimg.org/7ld77yqpf/tea.png"></span>
+						</div>
+					</div>
+				</div>
+				<div class="property_style">
+					<div class="pro_img">
+				
+					</div>
+					<div class="pro_name">
+						<h3>Standard Double room</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun.
+						</p>
+					</div>
+					<div class="pro_icon">
+						<div class="pro_icon">
+						<div class="icon">
+						<span><img src="http://s3.postimg.org/fgnqms0c3/air.png"></span>
+						<span><img src="http://s3.postimg.org/c25k6n4xf/coler.png"></span>
+						<span><img src="http://s3.postimg.org/nfs3hufg3/iron_icon.png"></span>
+						<span><img src="http://s3.postimg.org/uk9wqvmpf/image.png"></span>
+						<span><img src="http://s3.postimg.org/i6x2jyx0z/wifi.png"></span>
+						<span><img src="http://s3.postimg.org/7ld77yqpf/tea.png"></span>
+						</div>
+					</div>
+					</div>
+				</div><!-- property_style -->		
+				<div class="property_style">
+					<div class="pro_img">
+			
+					</div>
+					<div class="pro_name">
+						<h3>Standard Double room</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun.
+						</p>
+					</div>
+					<div class="pro_icon">
+						<div class="pro_icon">
+						<div class="icon">
+						<span><img src="http://s3.postimg.org/fgnqms0c3/air.png"></span>
+						<span><img src="http://s3.postimg.org/c25k6n4xf/coler.png"></span>
+						<span><img src="http://s3.postimg.org/nfs3hufg3/iron_icon.png"></span>
+						<span><img src="http://s3.postimg.org/uk9wqvmpf/image.png"></span>
+						<span><img src="http://s3.postimg.org/i6x2jyx0z/wifi.png"></span>
+						<span><img src="http://s3.postimg.org/7ld77yqpf/tea.png"></span>
+						</div>
+					</div>
+					</div>
+				</div><!-- property_style -->
+				</div><!-- properties_box -->
+
+
+
+				<div class="properties_box"><!-- properties_box -->
+					<div class="property_style">
+					<div class="pro_img">
+						
+					</div><!-- pro_img -->
+					<div class="pro_name">
+						<h3>Standard Double room</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun.
+						</p>
+					</div><!-- pro_name -->
+					<div class="pro_icon">
+						<div class="icon">
+						<span><img src="http://s3.postimg.org/fgnqms0c3/air.png"></span>
+						<span><img src="http://s3.postimg.org/c25k6n4xf/coler.png"></span>
+						<span><img src="http://s3.postimg.org/nfs3hufg3/iron_icon.png"></span>
+						<span><img src="http://s3.postimg.org/uk9wqvmpf/image.png"></span>
+						<span><img src="http://s3.postimg.org/i6x2jyx0z/wifi.png"></span>
+						<span><img src="http://s3.postimg.org/7ld77yqpf/tea.png"></span>
+						</div>
+					</div>
+				</div>
+				<div class="property_style">
+					<div class="pro_img">
+					
+					</div>
+					<div class="pro_name">
+						<h3>Standard Double room</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun.
+						</p>
+					</div>
+					<div class="pro_icon">
+						<div class="pro_icon">
+						<div class="icon">
+						<span><img src="http://s3.postimg.org/fgnqms0c3/air.png"></span>
+						<span><img src="http://s3.postimg.org/c25k6n4xf/coler.png"></span>
+						<span><img src="http://s3.postimg.org/nfs3hufg3/iron_icon.png"></span>
+						<span><img src="http://s3.postimg.org/uk9wqvmpf/image.png"></span>
+						<span><img src="http://s3.postimg.org/i6x2jyx0z/wifi.png"></span>
+						<span><img src="http://s3.postimg.org/7ld77yqpf/tea.png"></span>
+						</div>
+					</div>
+					</div>
+				</div><!-- property_style -->		
+				<div class="property_style">
+					<div class="pro_img">
+						
+					</div>
+					<div class="pro_name">
+						<h3>Standard Double room</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun.
+						</p>
+					</div>
+					<div class="pro_icon">
+						<div class="pro_icon">
+						<div class="icon">
+						<span><img src="http://s3.postimg.org/fgnqms0c3/air.png"></span>
+						<span><img src="http://s3.postimg.org/c25k6n4xf/coler.png"></span>
+						<span><img src="http://s3.postimg.org/nfs3hufg3/iron_icon.png"></span>
+						<span><img src="http://s3.postimg.org/uk9wqvmpf/image.png"></span>
+						<span><img src="http://s3.postimg.org/i6x2jyx0z/wifi.png"></span>
+						<span><img src="http://s3.postimg.org/7ld77yqpf/tea.png"></span>
+						</div>
+					</div>
+					</div>
+				</div><!-- property_style -->
+			   </div><!-- properties_box -->
+			</div><!-- properties -->
+		</div><!-- container -->
+
+         <div class="contain">
+         	<div class="info_box">
+         		<div class="info_text">
+         			<h2>143 City Located Hotels World Wide</h2>
+         			<p>"Hospitality, Quality & Good Locations. We only provide you with the best hotels" Jhon doe</p>
+         		</div>
+         		<div class="person">
+         			<div class="person_img">
+         				<img src="http://s2.postimg.org/5senbl5zd/person.png">
+         			</div>
+         		</div>
+         	</div>
+         </div>
+
+         <div class="footer_container">
+         	<div class="container">
+         		<div class="footer">
+         		<div class="footer_Style1">
+         		<h3>ABOUT THIS HOTEL</h3>
+         			<div class="about_Text">
+         				<p>
+         					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+         					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam consequat.
+         				</p>
+         				<p>
+         					Lorem ipsum dolor sit amet, consectetur adipisicing elit, Ut enim ad minim veniam consequat.
+         				</p>
+         			</div>
+         		</div>
+         		<div class="footer_Style1">
+         			<h3>LATEST NEWS</h3>
+         			<div class="news_Text">
+         				<p>
+         					Grand hotels joins deluxe hotel<br/>
+         					15 AUG<br/>
+         					Join Christmas To Everyone<br/>
+         					15 AUG<br/>
+         					Best Places To Visit 2014<br/>
+         					15 AUG<br/>
+         					Various Offers<br/>
+         					15 AUG
+         				</p>
+         			</div>
+         		</div>
+         		<div class="footer_Style2">
+         			<h3>JOIN DELUXE HOTELS</h3>
+         			<div class="deluxe-hotels">
+         				<p>
+         					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+         					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+         					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+         					consequat.
+         					ad minim veniam,
+         					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+         					consequat.
+         				</p>
+         				<button type="submit" class="read-more"><a href="">Read more</a></button>
+         			</div>
+         		</div>
+         		<div class="footer_Style1">
+         			<h3>MEMBERS AREA</h3>
+         			<div class="member_area">
+         				<form>
+         					<div class="form-groups">
+         						<label>Username</label>
+         						<input type="text" class="user" placeholder="">
+         					
+         						<label>Password</label>
+         						<input type="password" class="user" placeholder="">
+         						<button type="submit" class="login-btn"><a href="">Login</a></button>
+         					</div>
+         				</form>
+         			</div>
+         		</div>
+         	</div
+         	</div>
+         </div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
